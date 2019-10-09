@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<style>
+    .bullet {
+        background-color: blue;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+
+    }
+</style>
+
+<body>
+
+    <script>
+        // Napisz skrypt, który będzie tworzyć element o klasie bullet i dodawać w losowe miejsce na stronie
+        // (widoczne dla użytkownika).
+
+        function createCircle() {
+            let blueCircle = document.createElement("div");
+            blueCircle.setAttribute('class', 'bullet');
+            document.body.appendChild(blueCircle);
+            blueCircle.style.setProperty("position", "absolute");
+
+            let randomX = Math.floor(Math.random() * 700);
+            let randomTop = Math.floor(Math.random() * 500);
+            blueCircle.style.marginLeft = randomX + 'px';
+            blueCircle.style.marginTop = randomTop + 'px';
+
+        }
+        createCircle()
+
+
+    </script>
+</body>
+
+</html>

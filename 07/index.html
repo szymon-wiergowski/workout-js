@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+</head>
+
+<body>
+    <form>
+        <label for="name">Imię</label>
+        <input type="text" id="name" name="name" value="">
+        <label for="surname">Nazwisko</label>
+        <input type="text" id="surname" name="surname" value="">
+        <input type="button" value="Wyślij" onclick="submitForm()">
+    </form>
+    <h1 id="hello"></h1>
+    <script>
+        // Napisz skrypt, który po wysłaniu formularza wyświetli tekst z wysłanym imieniem i nazwiskiem w elemencie hello.
+        // Po 2s tekst w hello powinien się wyczyścić.
+
+        let helloDisplay = document.querySelector('#hello');
+        let inputName = document.querySelector('#name');
+        let inputSurname = document.querySelector('#surname');
+
+        function submitForm() {
+
+            helloDisplay.innerHTML = inputName.value + ' ' + inputSurname.value;
+
+            function resetForm() {
+                helloDisplay.innerHTML = '';
+                inputName.value = '';
+                inputSurname.value = '';
+            }
+            setTimeout(resetForm, 2000);
+        }
+        submitForm();
+
+
+    </script>
+</body>
+
+</html>

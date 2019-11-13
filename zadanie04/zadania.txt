@@ -1,0 +1,42 @@
+1) Napisz funkcje, która sprawdza czy w przekazanej jako parametr liscie
+jest element (rowniez przekazany jako parametr)
+
+2) Napisz funkcje, która sumuje trzy przekazane do niej liczny
+i jeśli wynik jest większy niz 0 drukuje do konsoli napis:
+"liczba jest dodatnia", a jesli wynik jest mniejszy niz 0, drukuje:
+"Liczba jest ujemna", a jesli rowny 0 to drukuje: 0
+
+3) Napisz funkcje, ktora wydrukuje w konsoli dlugosc przekazaniej tablicy
+jako paramert. Np. w takim formacie: "Przekazana tablica ma 
+x elementow". Jesli przekazana tablica jest pusta, to wyswietl stosowny komunikat.
+
+4) Stworz obiekt, ktory zawiera liste jako jedna z wlasnosci. 
+Wydrukuj do konsoli caly obiekt jak i sama tablice
+
+5) Wykorzystaj console.table() do zadania 4)
+
+6) Napisz dwie funkcje: jedna funkcja słuzy do zwiekszania przekazanej liczby, druga do zmniejszania przekazanej liczby. Potestuj ich dzialanie
+
+7) Co sie stanie jesli funkcja przyjmuje 2 parametry, a programista
+przekaze do tej funkcji 10 parametrow?
+
+8) Co sie stanie jesli funkcja przyjmuje 5 parametrow, a programista
+przekaze do tej funkcj tylko jeden parametr? 
+
+9*) Napisz funkcje, która przyjmuje inna funkcje jako parametr i wywoluje ja tylko wtedy gdy drugi parametr jest spelniony (true)
+
+10*) Napisz funkcje samowywołującą się, która przyjmuje Twoje imie jako parametr i wita się z toba słowami: "Dzień dobry, {TwojeImie}"
+
+Dodatkowe
+
+11) Napisz funkcje samowywołującą się, która przyjmuje Twoje imie jako parametr i wita się z toba słowami: "Dzień dobry, {TwojeImie}"
+
+12) Stworz tablice ktora zawiera same cyfry.
+Napisz funkcje, ktora podwoi co drugą liczbę w tej tablicy.
+
+13) Zsumuj wszyskie wartosci z tablicy powyzej (uzyj petli for)
+
+14) Stworz tablice zawierająca imiona kobiece i meskie.
+Wyswietl tylko imiona kobieca (mozesz zalozyc ze imie kobiece konczy się na "a")
+
+

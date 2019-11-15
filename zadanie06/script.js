@@ -96,6 +96,17 @@ class ShoppingCart {
 var shoppingCart = new ShoppingCart();
 
 // AD 3
+
+ShoppingCart.prototype.addProduct = function (product, quantity) {
+    this.product = product;
+    this.quantity = quantity;
+    let toPay = product.price * quantity;
+    cart.push(product, quantity, toPay);
+    allToPay.push(toPay);
+    let weight = product.amount * quantity;
+    allWeight.push(weight)
+}
+
 shoppingCart.addProduct(watermelon, 2);
 shoppingCart.addProduct(apple, 10);
 shoppingCart.addProduct(cheese, 2);

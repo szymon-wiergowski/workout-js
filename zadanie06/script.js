@@ -21,19 +21,21 @@ Object.getPrototypeOf(doctor).surname = "Fox";
 Object.getPrototypeOf(journalist).surname = "Parker";
 Object.getPrototypeOf(Object.getPrototypeOf(petSurgeon)).surname = "Hide";
 // Try to guess results
-console.log('person',            person.getFullName(),            "--- YOUR ANSWER ---");
-console.log('doctor',            doctor.getFullName(),            "--- YOUR ANSWER ---");
-console.log('journalist',        journalist.getFullName(),        "--- YOUR ANSWER ---");
-console.log('surgeon',           surgeon.getFullName(),           "--- YOUR ANSWER ---");
-console.log('remodelingSurgeon', remodelingSurgeon.getFullName(), "--- YOUR ANSWER ---");
-console.log('petSurgeon',        petSurgeon.getFullName(),        "--- YOUR ANSWER ---");
-
+console.log('person', person.getFullName(), "John Doe");
+console.log('doctor', doctor.getFullName(), "John Fox");
+console.log('journalist', journalist.getFullName(), "John Parker");
+console.log('surgeon', surgeon.getFullName(), "Dana Doe");
+console.log('remodelingSurgeon', remodelingSurgeon.getFullName(), "Unknown");
+console.log('petSurgeon', petSurgeon.getFullName(), "Dana Hide");
 
 // let's code!
 
 var PLASTIC_BAG_CAPACITY = 3500;
 
 // AD 1 - zaimplementuje function constructor dla produktów 'new NAZWA(price, amount)'
+
+
+
 var watermelon = new Fruit(12.90, 1500);
 var apple = new Fruit(1.90, 200);
 var cheese = new Dairy(2.39, 100);

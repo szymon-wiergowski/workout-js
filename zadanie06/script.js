@@ -115,10 +115,37 @@ shoppingCart.addProduct(balticCod, 7);
 shoppingCart.addProduct(salmon, 8);
 
 // AD 4
+
+sumAllToPay = allToPay.reduce(function (prev, next) {
+    return prev + next;
+});
+
+ShoppingCart.prototype.isEnoughMoney = function (amount) {
+    if (amount < sumAllToPay) {
+        return false
+    } else {
+        return true
+    };
+};
+
 console.log('Is 60PLN enough?', shoppingCart.isEnoughMoney(60)); // false
 console.log('Is 80PLN enough?', shoppingCart.isEnoughMoney(80)); // false
 console.log('Is 100PLN enough?', shoppingCart.isEnoughMoney(100)); // true
+
+ShoppingCart.prototype.getTotalPrice = function () {
+    return sumAllToPay.toFixed(2);
+};
+
 console.log('Total price of added products:', shoppingCart.getTotalPrice()); // 94.97
+
+sumAllWeight = allWeight.reduce(function (prev, next) {
+    return prev + next;
+});
+
+ShoppingCart.prototype.getTotalWeight = function () {
+    return sumAllWeight;
+};
+
 console.log('Total weight of added products:', shoppingCart.getTotalWeight()); // 7700
 
 // AD 5

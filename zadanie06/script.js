@@ -161,5 +161,10 @@ ShoppingCart.prototype.containFish = function () {
 console.log('Do I have a fish?', shoppingCart.containFish()); // true
 
 // AD 6
+
+ShoppingCart.prototype.getNumberOfNeededPlasticBags = function () {
+    return Math.ceil(sumAllWeight / PLASTIC_BAG_CAPACITY);
+};
+
 console.log('How many plastic bags I need:', shoppingCart.getNumberOfNeededPlasticBags()); // 3
 

@@ -149,6 +149,15 @@ ShoppingCart.prototype.getTotalWeight = function () {
 console.log('Total weight of added products:', shoppingCart.getTotalWeight()); // 7700
 
 // AD 5
+
+ShoppingCart.prototype.containFish = function () {
+    if (Fish) {
+        return true
+    } else {
+        return false
+    };
+};
+
 console.log('Do I have a fish?', shoppingCart.containFish()); // true
 
 // AD 6

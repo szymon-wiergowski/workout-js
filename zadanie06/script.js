@@ -79,6 +79,20 @@ var balticCod = new Fish(2.28, 100);
 var salmon = new Fish(3.28, 100);
 
 // AD 2 - zaimplementuje function constructor dla shoppingCart
+
+let cart = [];
+let allToPay = [];
+let sumAllToPay = 0;
+let allWeight = [];
+let sumAllWeight = 0;
+
+class ShoppingCart {
+    constructor(product, quantity) {
+        this.product = product;
+        this.quantity = quantity;
+    }
+}
+
 var shoppingCart = new ShoppingCart();
 
 // AD 3

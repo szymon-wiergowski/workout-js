@@ -1,0 +1,17 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my-file.js",
+  "scripts": {
+    "start": "node my-file.js",
+    "foo": "node my-file.js"
+  },
+  "author": "Michał Michalczuk <michalczukm@gmail.com> (https://michalczukm.xyz)",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "jquery": "3.4.1",
+    "lodash": "4.17.15"
+  }
+}

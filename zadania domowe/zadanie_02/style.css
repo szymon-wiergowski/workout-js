@@ -1,0 +1,417 @@
+body, h1, h2, p, address, a, button {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+    background: url(images/background1.png) no-repeat top center #f9f8fb;
+}
+.site{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.site-header {
+    padding-top: 45px;
+}
+
+.site-header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .site-logo {
+    font-family: Pacifico, cursive;
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+}
+
+.site-header .main-menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+}
+
+.site-header .main-menu-item a {
+    color: #262626;
+    text-decoration: none;
+    display: block;
+    border-top: 3px solid transparent;
+    padding-top: 5px;
+    transition: border-top-color 0.2s;
+    margin-right: 35px;
+    font-size: 16px;
+}
+
+.site-header .main-menu-item a:hover {
+    border-top-color: #ff6033;
+}
+
+.site-header .main-menu-item.active a {
+    border-top-color: #ff6033;
+}
+
+.site-header .main-menu-item.active a:hover {
+    border-top-color: #992200;
+}
+
+.site-header .main-menu-item:last-child a {
+    margin-right: 0;
+}
+
+.section-fresh {
+    height: 900px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    
+}
+
+.section-fresh::after {
+    content: url(images/scroll.png);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 70px;
+}
+
+.section-fresh .container {
+    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.section-fresh .section-fresh-content {
+    max-width: 380px;
+}
+
+.section-fresh .section-fresh-title {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.section-fresh .section-fresh-text {
+    margin: 30px 0;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.section-fresh .section-fresh-action {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    height: 55px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 200px;
+    border: none;
+    background: #ff6033;
+    color: white;
+    box-shadow: 0 20px 30px rgba(255, 96, 51, 0.3);
+}
+
+.site-footer {
+    background: #262626;
+    color: white;
+}
+
+.site-footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+}
+
+.site-footer .footer-author, .site-footer .footer-copyright, .site-footer .footer-logo {
+    margin: 0;
+    flex: 1;
+}
+
+.site-footer .footer-copyright {
+    font-style: normal;
+    font-size: 5px;
+}
+
+.site-footer .footer-logo {
+    font-family: Pacifico, cursive;
+    font-weight: 600;
+    text-align: center;
+}
+
+.site-footer .footer-author {
+    text-align: center;
+    font-size: 5px;
+}
+
+.site-footer .footer-author strong {
+    color: #ff6033;
+}
+
+/** < -- tutaj sekcja About us --> **/
+
+.section-about {
+    height: 650px;
+    align-items: stretch;
+    position: relative;
+    background-color: #02B0B8;
+}
+.container_about{
+    display: flex;
+    flex-direction: row;
+}
+.section-about-content_png{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-about-content_text {
+    font-size: 0.8rem;
+    margin-top: 10%;
+    margin-right: 5%;
+    width: 40%;
+    text-align: left;
+    color: white;
+    
+}
+.raspberries{
+    width: 70%; 
+    margin: 35px 45px auto auto;
+}
+.section-about-title{
+    font-size: 3.6rem;
+    margin-bottom: 50px;
+    margin-right: 120px;
+}
+/** < -- tutaj sekcja our Services --> **/
+.section-services {
+    height: 700px;
+    position: relative;
+    background-color: #76BEF3;
+}
+.container_services{
+    position: relative;
+    display: flex;
+    
+}
+.section-services-lists{
+    width: 400px;
+    height: 580px;
+    flex: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section-services-lists-item{
+    width: 300px;
+    height: 100px;
+    border: none;
+    background-color: #fff;
+    padding: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+.section-services-lists-item-active{
+    width: 400px;
+    height: 100px;
+    border: none;
+    background-color: #fff;
+    padding: 0;
+    margin: 120px 0 0 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.services-img{
+    width: 99px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    justify-content: center;
+    border-left: solid 1px grey;
+    margin: 0;
+    padding: 0;
+}
+.section-services-content_text {
+    position: relative;
+    font-size: 0.8rem;
+    flex: 55%;
+    text-align: left;
+    color: white;
+}
+.tomatos{
+    width: 55%;
+    top: 110px; 
+    left: 100px;
+    position: absolute;
+}
+.section-services-title{
+    font-size: 3.6rem;
+    top: 275px;
+    left: 100px;
+    position: absolute;
+    z-index: 999;
+}
+/** < -- tutaj sekcja our Gallery --> **/
+.container_gallery{
+    height: 1300px;
+    position: relative;
+    background-color: #F7EC32;
+    display: grid;
+    justify-content: center;
+    align-items: center;            
+}
+.section-gallery-title{
+    font-size: 3.6rem;
+    text-align: center;
+    margin-top: 5%;
+    height: 20px;
+}
+.section-gallery-text{
+    font-size: 1rem;
+    text-align: center;
+    width: 700px;
+    height: 50px;
+    margin-left: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.foto-galery{
+    height: 900px;
+    width: 1100px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: "jpg1 jpg1 jpg1 jpg1 jpg2 jpg2"
+                        "jpg1 jpg1 jpg1 jpg1 jpg2 jpg2"
+                        "jpg1 jpg1 jpg1 jpg1 jpg3 jpg3"
+                        "jpg1 jpg1 jpg1 jpg1 jpg3 jpg3"
+                        "jpg4 jpg4 jpg4 jpg5 jpg5 jpg5"
+                        "jpg4 jpg4 jpg4 jpg5 jpg5 jpg5"
+                        "jpg4 jpg4 jpg4 jpg5 jpg5 jpg5"
+}
+.section-gallery-img-1{
+    grid-area: jpg1;
+    background-image: url("/images/gallery/1.jpg"); 
+    background-size: cover; 
+}
+.section-gallery-img-2{
+    grid-area: jpg2; 
+    background-image: url("/images/gallery/2.jpg"); 
+    background-size: cover;  
+}
+.section-gallery-img-3{
+    grid-area: jpg3; 
+    background-image: url("/images/gallery/3.jpg"); 
+    background-size: cover;   
+}
+.section-gallery-img-4{
+    grid-area: jpg4;  
+    background-image: url("/images/gallery/4.jpg"); 
+    background-size: cover;  
+}
+.section-gallery-img-5{
+    grid-area: jpg5; 
+    background-image: url("/images/gallery/5.jpg"); 
+    background-size: cover; 
+}
+.section-gallery-button{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.galery-input_button{
+    width: 150px;
+    height: 42px;
+    color: white;
+    background-color:rgb(79, 148, 180);
+    border: none;
+}
+
+    /** < -- tutaj sekcja our Subscribe --> **/
+
+.section-subscribe{
+    height: 550px;
+    background-color: #FBFBFB;
+    position: relative;
+}
+
+.section-subscribe-img{
+    position: absolute;
+    height: 400px;
+    width: 700px;
+    right: 0;
+    top: 85px;
+    background-image: url("/images/background4.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    z-index: 0;
+}
+
+.section-subscribe-list{
+    position: absolute;
+    width: 540px;
+    height: 150px;
+    margin-left: 90px;
+    margin-top: 160px;
+    
+}
+h2{
+    font-size: 30px;
+}
+.subscribe-list-text{
+    font-size: 16px;
+}
+.section-subscribe-container-card{
+    position: absolute;
+    width: 700px;
+    height: 150px;
+    margin-left: 90px;
+    margin-top: 280px;
+}
+.subscribe-input{
+    width: 500px;
+    height: 35px;
+}
+.subscribe-input_button{
+    position: absolute;
+    width: 150px;
+    height: 42px;
+    color: white;
+    background-color:#A9B760;
+    margin-left: 540px;
+    margin-top: -62px;
+    z-index: 999;
+    border: none;
+}

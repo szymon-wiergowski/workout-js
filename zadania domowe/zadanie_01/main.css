@@ -1,0 +1,234 @@
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 1000px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    margin: auto;
+   
+}
+/** sekcja dot. nawigacji **/
+.navbar {
+   display: grid;
+   position: relative;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   color: white;
+   }  
+.navbar-item-button {
+    margin: auto;
+    padding: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: black; 
+    }
+.navbar-item-button:hover {
+    color: white;
+    background-color: #626E6E;
+    width: 100%;
+    }
+hr  {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+/** sekcja dot. nazwy firmy i rodzaju działalności   **/
+.section-1 {
+    margin: 10px auto 10px auto;
+}  
+.Company_name {
+    margin: 30px auto 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+.Company_tasks_p {
+    margin: 10px auto 40px auto;
+    color: #1E5D79;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+ }
+.section-1-1{
+    margin: 10px;
+    position: relative;
+    text-align: center;
+    font-size: 1.1em;
+}
+.section-1-1_jpg {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 410px;
+}
+.section-1-1-p{
+    position: absolute;
+    top: 32%;
+    right: 4%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    font-size: 1.5em;
+    text-align: center;
+}
+.motto{
+    color: white;
+    font-size: 1.1em;
+}
+.author{
+    margin: 20px; 
+    color: white;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    text-align: right;
+}
+/** sekcja: o mnie, zainteresowania, umiejetnosci i projekty   **/
+
+#main_o_mnie{
+    margin: 10px;
+    position: relative;
+    display: grid;
+    background-color: 		#583091;
+    height: 410px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:    "main_header main_header"
+                            "main_o_mnie-1 main_o_mnie-2"
+}
+.main_header {
+    grid-area: main_header;
+    margin: 30px auto 30px auto;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: white;
+}
+.main_o_mnie-1 {
+    grid-area: main_o_mnie-1;
+    position: absolute;
+    color: white;
+    text-align: left;
+    left: 65px;
+    top: 30px;
+    width: 70%;
+    font-size: 1.5em;
+}
+.main_o_mnie-1-1{
+    font-size: 0.9em;
+}
+.main_o_mnie-2 {
+    grid-area: main_o_mnie-2;
+    position: absolute;
+    border-radius: 50%;
+    top: 10%;
+    right: 15%;
+}
+.section-2 {
+    margin: 10px;
+    position: relative;
+    display: grid;
+    border: black;
+}
+#main_projekty {
+    position: absolute;
+    margin: 10px 0 10px 10px;
+    padding: 4%;
+    background-color: #02ACAC ;
+    width: 49%;
+    right: 0;
+    height: 410px;
+}
+#main_zainteresowania {
+    position: absolute;
+    margin: 10px 10px 10px 0;
+    padding: 4%;
+    background-color: 	#223F9C ;
+    width: 49%;
+    left: 0;
+    height: 410px;
+}
+.main_header_1{
+   font-size: 1.6em;
+   text-align: center;
+   text-transform: uppercase;
+   color: white;
+}
+ul {
+    list-style-type: none;
+  }
+li {
+    font-size: 1.3em;
+    color: rgba(255, 255, 255, 0.925);
+    padding: 10px;
+}
+#main_umiejętności {
+    position: relative;
+    display: grid;
+    top: 430px;
+    margin: 10px ;
+    padding: 10px;
+    background-color: white;
+    
+    height: 220px;
+    text-align:center;
+} 
+h4{
+    font-size: 1.6em;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+.icon_name{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+
+}
+.fab {
+    color: black;
+    font-size: 120px;
+    text-align:center;
+    padding: 0 98px;
+    }
+
+.fa-js-square{
+    color:#F6DE1F;
+}
+.fa-react {
+    color: #63D9F4;
+}
+.fa-git-square {
+    color:#F54F24;
+}
+
+    /** sekcja footer  **/
+
+footer {
+    position: relative;
+    top: 430px;
+    margin: 10px ;
+    padding: 15px 5px;
+    color: white;
+    text-align: center;
+    background-color:	#F0832C;
+    height: 100px;
+}  
+

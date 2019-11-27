@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+
+<body>
+    <button class="button">Podaj imię</button>
+    <h1 id="hello">Cześć "tutaj wstaw imię"!</h1>
+    <script>
+        // Napisz skrypt, który na kliknięcie przycisku pokaże komunikat z możliwością wpisania tekstu, który potem
+        // zostanie użyty do zastąpienia "tutaj wstaw imię" w hello
+
+        const buttonYourName = document.querySelector('.button');
+        document.onkeyup = keyUpCrtlZero;
+        let helloDisplay = document.querySelector('#hello');
+
+
+        buttonYourName.onclick = function () {
+            const buttonYourName = window.prompt("Jak Ci na imię?", 'Twoje imie');
+            if (buttonYourName) {
+                helloDisplay.innerText = "Cześć " + buttonYourName + "!";
+            }
+        }
+
+        function keyUpCrtlZero() {
+            const keyid = event.keyCode;
+            if (keyid == 48 && 17) {
+                const buttonYourName = window.prompt("Jak Ci na imię?", 'Twoje imie');
+                if (buttonYourName) {
+                    helloDisplay.innerText = "Cześć " + buttonYourName + "!";
+                }
+            }
+        }
+
+       // * Dodaj możliwość pojawienia się tego samego komunikatu po wpisaniu na klawiaturze CTRL + O
+    </script>
+</body>
+
+</html>

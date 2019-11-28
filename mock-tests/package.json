@@ -1,0 +1,25 @@
+{
+  "name": "InfoShareRepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest -- coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infoshareacademy/jfdz12-materialy-mock-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infoshareacademy/jfdz12-materialy-mock-tests/issues"
+  },
+  "homepage": "https://github.com/infoshareacademy/jfdz12-materialy-mock-tests#readme",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}

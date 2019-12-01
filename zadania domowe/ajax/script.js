@@ -63,5 +63,68 @@ const userNameInput = document.getElementById('user-name-input');
 // https://jsonplaceholder.typicode.com/users
 //
 
-
+{
+    const fetchPosts = () => {
+        return fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(res => res.json());
+    };
+    
+    const fetchUsers = () => {
+        return fetch('https://jsonplaceholder.typicode.com/users')
+            .then(res => res.json());
+    };
+    
+    const asyncFetchPosts = async () => {
+        try {
+            const data = await Promise.all([fetchPosts(), fetchUsers()]);
+            const postsUser = data[0];
+            const users = data[1];
+            const userName = userNameInput.value.toLowerCase();
+    
+            const searchedUser = users.find(user => {
+                return user.name.toLowerCase().includes(userName)
+            });
+    
+            const filteredPosts = postsUser.filter(posts => {
+                return searchedUser.id === posts.userId
+            });
+    
+            const writeList = (posts) => {
+                const liTitle = document.createElement('li');
+                liTitle.innerText = `* Title: ${posts.title}`;
+                list.appendChild(liTitle);
+                const liDescription = document.createElement('li');
+                liDescription.innerText = `Description: ${posts.body}`;
+                list.appendChild(liDescription);
+            }
+          
+            if (userName === "") {
+                postsUser.map((posts) =>
+                    writeList(posts)
+                );
+                return postsUser;
+            } else if (userName === searchedUser.name.toLowerCase() || userName !== searchedUser.name.toLowerCase()) {
+                filteredPosts.map((posts) =>
+                    writeList(posts)
+                );
+                return filteredPosts;
+            }
+        } catch (err) {
+            message.innerText = `Some error occurred.`;
+        }
+    };
+    
+    const getPosts = () => {
+        button.innerText = "Loading ...";
+        button.disabled = true;
+        asyncFetchPosts()
+            .finally(() => {
+                button.innerText = "Pobierz posty";
+                button.disabled = false;
+            });
+    };
+    
+    button.addEventListener('click', getPosts);
+    }
+    
 

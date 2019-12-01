@@ -5,6 +5,39 @@ const userNameInput = document.getElementById('user-name-input');
 
 // 1. Pobierz dane z endpointu: https://jsonplaceholder.typicode.com/posts na kliknięcie przycisku #button.
 
+{
+    const asyncFetchPosts = async () => {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+            const post = await response.json();
+            message.innerText = `${post.length} posts downloaded`;
+    
+            post.forEach(posts => {
+                const liTitle = document.createElement('li');
+                liTitle.innerText = `* Title: ${posts.title}`;
+                list.appendChild(liTitle);
+                const liDescription = document.createElement('li');
+                liDescription.innerText = `Description: ${posts.body}`;
+                list.appendChild(liDescription);
+            });
+            return post;
+        } catch (err) {
+            message.innerText = `Some error occurred.`;
+        }
+    };
+    
+    const getPosts = () => {
+        button.innerText = "Loading ...";
+        button.disabled = true;
+        asyncFetchPosts()
+            .finally(() => {
+                button.innerText = "Pobierz posty";
+                button.disabled = false;
+            });
+    };
+    
+    button.addEventListener('click', getPosts);
+    }
 
 // 2. Wyświetl dane w postaci listy w HTMLu wg. schematu:
 // * title

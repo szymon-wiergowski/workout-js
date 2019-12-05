@@ -65,14 +65,10 @@ var salmon = new Fish(3.28, 100);
 // AD 2 - zaimplementuje function constructor dla shoppingCart
 
 class ShoppingCart {
-    constructor(product, quantity) {
-        this.product = product;
-        this.quantity = quantity;
-        this.cart = [];
-        this.toPay = [];
-        this.sumOfWeight = [];
+    constructor() {
+        this.productList = [];
     }
-}
+};
 
 var shoppingCart = new ShoppingCart();
 

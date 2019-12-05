@@ -89,30 +89,24 @@ shoppingCart.addProduct(salmon, 8);
 
 // AD 4
 
-ShoppingCart.prototype.isEnoughMoney = function (amount) {
-    this.sumToPay = sumToPay = this.toPay.reduce((prev, next) =>
-        prev + next);
-    if (amount < sumToPay) {
-        return false
-    } else {
-        return true
-    };
+ShoppingCart.prototype.isEnoughMoney = function (money) {
+    return money > this.getTotalPrice();
+};
+
+ShoppingCart.prototype.getTotalPrice = function () {
+    const totalPrice = this.productList.map(product => product.price).reduce((a, b) => a + b);
+    return totalPrice;
+};
+
+ShoppingCart.prototype.getTotalWeight = function () {
+    const totalWeight = this.productList.map(product => product.amount).reduce((a, b) => a + b);
+    return totalWeight;
 };
 
 console.log('Is 60PLN enough?', shoppingCart.isEnoughMoney(60)); // false
 console.log('Is 80PLN enough?', shoppingCart.isEnoughMoney(80)); // false
 console.log('Is 100PLN enough?', shoppingCart.isEnoughMoney(100)); // true
-
-ShoppingCart.prototype.getTotalPrice = () => this.sumToPay.toFixed(2);
-
 console.log('Total price of added products:', shoppingCart.getTotalPrice()); // 94.97
-
-
-ShoppingCart.prototype.getTotalWeight = function () {
-    this.sumAllWeight = sumAllWeight = this.sumOfWeight.reduce((prev, next) => prev + next);
-    return sumAllWeight;
-};
-
 console.log('Total weight of added products:', shoppingCart.getTotalWeight()); // 7700
 
 // AD 5

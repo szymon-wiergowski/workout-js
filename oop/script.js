@@ -75,10 +75,10 @@ var shoppingCart = new ShoppingCart();
 // AD 3
 
 ShoppingCart.prototype.addProduct = function (product, quantity) {
-    this.cart.push(product, quantity);
-    this.toPay.push(product.price * quantity);
-    this.sumOfWeight.push(product.amount * quantity);
-}
+    for (let i = 0; i < quantity; i++) {
+        this.productList.push(product);
+    };
+};
 
 shoppingCart.addProduct(watermelon, 2);
 shoppingCart.addProduct(apple, 10);

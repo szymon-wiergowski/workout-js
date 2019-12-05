@@ -121,7 +121,9 @@ console.log('Do I have a fish?', shoppingCart.containFish()); // true
 
 // AD 6
 
-ShoppingCart.prototype.getNumberOfNeededPlasticBags = () =>
-    Math.ceil(this.sumAllWeight / PLASTIC_BAG_CAPACITY);
+ShoppingCart.prototype.getNumberOfNeededPlasticBags = function () {
+    const numberOfPlascticBags = Math.ceil(this.getTotalWeight() / PLASTIC_BAG_CAPACITY);
+    return numberOfPlascticBags;
+};
 
 console.log('How many plastic bags I need:', shoppingCart.getNumberOfNeededPlasticBags()); // 3

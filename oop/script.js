@@ -111,11 +111,9 @@ console.log('Total weight of added products:', shoppingCart.getTotalWeight()); /
 
 // AD 5
 
-ShoppingCart.prototype.containFish = () => {
-    if (Fish) {
+ShoppingCart.prototype.containFish = function () {
+    if (this.productList.find(product => product.type === "fish")) {
         return true
-    } else {
-        return false
     };
 };
 

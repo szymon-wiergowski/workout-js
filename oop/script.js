@@ -34,30 +34,26 @@ var PLASTIC_BAG_CAPACITY = 3500;
 
 // AD 1 - zaimplementuje function constructor dla produktów 'new NAZWA(price, amount)'
 
-class Product {
-    constructor(price, amount) {
-        this.price = price;
-        this.amount = amount;
-    }
-}
-
 class Fruit extends Product {
     constructor(price, amount) {
         super(price, amount);
-    }
-}
-
-class Fish extends Product {
-    constructor(price, amount) {
-        super(price, amount);
-    }
-}
+        this.type = "fruit";
+    };
+};
 
 class Dairy extends Product {
     constructor(price, amount) {
         super(price, amount);
-    }
-}
+        this.type = "dairy";
+    };
+};
+
+class Fish extends Product {
+    constructor(price, amount) {
+        super(price, amount);
+        this.type = "fish";
+    };
+};
 
 var watermelon = new Fruit(12.90, 1500);
 var apple = new Fruit(1.90, 200);
